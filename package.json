@@ -1,0 +1,43 @@
+{
+  "name": "e5o-spa-menv",
+  "version": "1.0.0",
+  "description": "SPA",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardobc/E5O-SPA-MENV.git"
+  },
+  "keywords": [
+    "E5O",
+    "SPA",
+    "MENV"
+  ],
+  "author": "Eduardo Beltran Carbajal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardobc/E5O-SPA-MENV/issues"
+  },
+  "homepage": "https://github.com/eduardobc/E5O-SPA-MENV#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.7",
+    "morgan": "^1.9.0",
+    "vue-loader": "^14.1.1"
+  },
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "css-loader": "^0.28.10",
+    "vue": "^2.5.13",
+    "vue-axios": "^2.0.2",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^4.0.0"
+  }
+}
