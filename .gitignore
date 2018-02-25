@@ -1,0 +1,9 @@
+# Logs
+logs
+*.log
+
+# Dependency directories
+node_modules/
+
+# MacOS folder hidden config file
+.DS_Store
