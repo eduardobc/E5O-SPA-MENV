@@ -3,8 +3,12 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const app = express();
+
 const APIRouter = require('./router/api-router');
+const DashboardRouter = require('./router/dashboard-router');
+const WebsiteRouter = require('./router/website-router');
+
+const app = express();
 
 
 // to use node promises instead of mongodb promises
@@ -21,6 +25,10 @@ mongoose.connect('mongodb://localhost/E5OSPAMENV', {
 app.set('port', process.env.PORT || 5000);
 app.use(bodyParser.json());
 
+// template engine
+app.set('view engine', 'pug');
+app.set("views", path.join(__dirname, "views"));
+
 
 // moddlewares
 app.use(cors());
@@ -28,6 +36,8 @@ app.use(bodyParser.json());
 
 
 // routes
+app.use('/', WebsiteRouter);
+app.use('/admin', DashboardRouter);
 app.use('/api', APIRouter);
 
 

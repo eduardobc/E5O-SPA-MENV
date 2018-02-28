@@ -30,6 +30,7 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.7",
     "morgan": "^1.9.0",
+    "pug": "^2.0.0-rc.4",
     "vue-loader": "^14.1.1"
   },
   "devDependencies": {
