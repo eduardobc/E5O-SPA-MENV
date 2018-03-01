@@ -4,15 +4,19 @@
   "description": "SPA",
   "main": "server.js",
   "scripts": {
-    "webpack:watch": "webpack -w",
-    "build": "webpack",
+    "webpack-build-dev:website": "webpack --config webpack-website-config.js -w",
+    "webpack-build-dev:dashboard": "webpack --config webpack-dashboard-config.js -w",
+    "webpack-build:website": "webpack --config webpack-website-config.js",
+    "webpack-build:dashboard": "webpack --config webpack-dashboard-config.js",
+    "pm2:start-watch": "node_modules/pm2/bin/pm2 start src/server.js -i 2 --name='e5o-spa-menv' --watch",
+    "pm2:kill": "node_modules/pm2/bin/pm2 kill",
+    "pm2:monit": "node_modules/pm2/bin/pm2 monit",
+    "pm2:app-logs": "node_modules/pm2/bin/pm2 logs e5o-spa-menv",
+    "pm2:global-logs": "node_modules/pm2/bin/pm2 logs",
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eduardobc/E5O-SPA-MENV.git"
-  },
+  "repository": "git+https://github.com/eduardobc/E5O-SPA-MENV.git",
   "keywords": [
     "E5O",
     "SPA",
@@ -30,6 +34,7 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.7",
     "morgan": "^1.9.0",
+    "pm2": "^2.10.1",
     "pug": "^2.0.0-rc.4",
     "vue-loader": "^14.1.1"
   },
@@ -46,3 +51,4 @@
     "webpack-cli": "^2.0.9"
   }
 }
+

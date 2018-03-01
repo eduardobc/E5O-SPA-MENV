@@ -7,15 +7,16 @@ import axios from 'axios';
 Vue.use(VueAxios, axios);
 
 import App from './app.vue'
-import DisplayMain from './components/display-main.vue'
+import Body from './components/body.vue'
 
 const routes = [
     {
-        name: 'DisplayMain',
+        name: 'Body',
         path: '/',
-        component: DisplayMain
+        component: Body
     },
 ];
+
 const router = new VueRouter({mode: 'history', routes: routes});
 new Vue(Vue.util.extend({router}, App)).$mount('#website-app');
 

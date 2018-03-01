@@ -1,11 +1,8 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/website-app/main.js',
-    output: {
-        path: path.join(__dirname, '/src/public/website-app/js'),
-        filename: 'website-bundle.js'
-    },
+    name: "dashboard",
+    // mode: "development || "production",
     entry: './src/dashboard-app/main.js',
     output: {
         path: path.join(__dirname, '/src/public/dashboard-app/js'),

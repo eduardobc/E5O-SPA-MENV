@@ -1,6 +1,6 @@
 <template lang="html">
     <div>
-        <h2>Website - Display Main</h2>
+        <h2>Website - Body VUE</h2>
     </div>
 </template>
 
