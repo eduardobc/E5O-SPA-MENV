@@ -7,13 +7,13 @@ import axios from 'axios';
 Vue.use(VueAxios, axios);
 
 import App from './app.vue'
-import Body from './components/body.vue'
+import Home from './components/home.vue'
 
 const routes = [
     {
-        name: 'Body',
+        name: 'home',
         path: '/',
-        component: Body
+        component: Home
     },
 ];
 
